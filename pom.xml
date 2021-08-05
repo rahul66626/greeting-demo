@@ -11,7 +11,7 @@
 	<groupId>com.xyz.raul</groupId>
 	<artifactId>greeting-demo</artifactId>
 	<version>0.0.1</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>greeting-demo</name>
 	<description>Springboot application for Greeting</description>
 	<properties>

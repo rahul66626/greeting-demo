@@ -1,2 +1,3 @@
-FROM openjdk:11-jdk-buster
-COPY target/greeting-demo-0.0.1.*.war /usr/local/tomcat/webapps/greeting-demo-0.0.1.war 
+FROM openjdk:11
+COPY target/greeting-demo-*.jar /greeting-demo.jar
+CMD ["java","jar","/greeting-demo.jar"] 
