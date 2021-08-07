@@ -1,8 +1,5 @@
-FROM openjdk:11.0.4-jre-slim
+FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-ARG DEPENDENCY=target/dependency
-COPY ${DEPENDENCY}/BOOT-INF/lib /app/BOOT-INF/lib
-COPY ${DEPENDENCY}/META-INF /app/META-INF
-COPY ${DEPENDENCY}/org /app/org
-COPY ${DEPENDENCY}/BOOT-INF/classes /app/BOOT-INF/classes
-CMD [ "java", "-XX:MaxRAMPercentage=80", "org.springframework.boot.loader.JarLauncher" ]
+ADD target/greeting-demo-*.jar greeting-demo.jar
+EXPOSE 8082
+ENTRYPOINT ["java","-jar","/greeting-demo.jar"] 
