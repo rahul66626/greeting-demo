@@ -1,5 +1,4 @@
 FROM openjdk:11
-COPY . /var/lib/jenkins/workspace/greeting-docker-app/target
-WORKDIR /var/lib/jenkins/workspace/greeting-docker-app/target
+COPY target/greeting-demo-*.jar /greeting-demo.jar
 EXPOSE 8082
-RUN java com.xyz.raul.greeting.GreetingDemoApplication
+CMD ["java","jar","greeting-demo.jar"] 
