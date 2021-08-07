@@ -1,4 +1,5 @@
 FROM openjdk:11
-COPY target/greeting-demo-*.jar /greeting-demo.jar
+COPY . /usr/src/greeting-demo
+WORKDIR /usr/src/greeting-demo
 EXPOSE 8082
-CMD ["java","jar","greeting-demo.jar"] 
+RUN javac GreetingDemoApplication.java
