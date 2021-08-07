@@ -1,5 +1,5 @@
 FROM openjdk:11
-COPY . /usr/src/greeting-demo
-WORKDIR /usr/src/greeting-demo
+COPY . /var/lib/jenkins/workspace/greeting-docker-app
+WORKDIR /var/lib/jenkins/workspace/greeting-docker-app
 EXPOSE 8082
-RUN javac GreetingDemoApplication.java
+RUN java -jar target/GreetingDemoApplication.java

@@ -39,7 +39,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>    
-                <mainClass>com.xyz.raul.greeting.GreetingDemoApplicationn</mainClass>
+                <mainClass>com.xyz.raul.greeting.GreetingDemoApplication</mainClass>
             </configuration>
 			</plugin>
 		</plugins>
